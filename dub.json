@@ -1,0 +1,17 @@
+{
+	"name": "minpyd",
+	
+	"dependencies": {
+		"pyd": "~master"
+	},
+
+	"lflags": [
+		"/LIBPATH:C:/Python/Python37/libs"
+	],
+	"libs": [
+		"python37", "python3"
+	],
+	"subConfigurations": {
+		"pyd" : "python37"
+	}
+}
