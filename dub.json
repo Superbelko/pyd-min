@@ -5,11 +5,14 @@
 		"pyd": "~master"
 	},
 
-	"lflags": [
+	"lflags-windows": [
 		"/LIBPATH:C:/Python/Python37/libs"
 	],
-	"libs": [
+	"libs-windows": [
 		"python37", "python3"
+	],
+	"libs-posix": [
+		"python3.7m"
 	],
 	"subConfigurations": {
 		"pyd" : "python37"

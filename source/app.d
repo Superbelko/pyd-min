@@ -1,8 +1,8 @@
 import core.thread;
 import std.stdio;
+
 import pyd.pyd;
 import pyd.embedded;
-import deimos.python.Python: Py_ssize_t, Py_Initialize;
 
 shared static this() 
 {
@@ -12,6 +12,10 @@ shared static this()
 
 void main() 
 {
+    // add current directory to PYTHONPATH, it is done by default on Windows but not on Linux
+    // otherwise the following py_import will be unable to find the module
+    py_stmts("import sys; sys.path += './'");
+
     // import python module
     auto stuff = py_import("stuff");
 
